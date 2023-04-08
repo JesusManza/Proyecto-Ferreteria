@@ -1,6 +1,6 @@
 <?php
 
-class = conexion{
+class conexion{
 
   private $host = "localhost";    //Servidor
   private $port = "3306";         //Puerto comunicación BD
