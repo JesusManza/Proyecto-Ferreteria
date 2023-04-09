@@ -10,7 +10,12 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css">
+
+<!--Icono de Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -53,6 +58,102 @@
         <li><img src="image/banner4.jpg" alt=""></li>
       </ul>
     </div>
+  <h1>Aki está la Base de Datos</h1>
+  <div class="container mt-3">
+    <div class="card">
+      <div class="card-header bg-primary text-light">
+        <div class="row">
+          <div class="col-md-6">
+            <strong>LISTA DE PRODUCTOS</strong>
+          </div>
+          <div class="col-md-6 text-end">
+            <button class="btn btn-success btn-sm" id="abrir-modal" data-bs-toggle="modal" data-bs-target="#modal-productos-registrar"><i class="bi bi-plus-circle"></i> Agregar Productos</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-sm table-striped" id="tabla-cursos">
+          <colgroup>
+            <col width = "5%">
+            <col width = "30%">
+            <col width = "25%">
+            <col width = "10%">
+            <col width = "10%">
+            <col width = "10%">
+            <col width = "10%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Marca</th>
+              <th>Proveedor</th>
+              <th>Categoria</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer text-end">
+        <button class="btn btn-primary btn-sm" id="guardar">Actualizar Datos</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-productos-registrar" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-secondary text-light">
+          <h5 class="modal-title" id="modalTitleId">Registrar Productos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formulario-cursos">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre del Producto</label>
+              <input type="text" class="form-control form-control-sm" id="nombre">
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripcion</label>
+              <select id="descripcion" class="form-select form-select-sm">
+                <option value="">Seleccione</option>
+                <option value="descripcion">Descripcion</option>
+                <option value="marca">Marca</option>
+                <option value="precio">Precio</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="complejidad" class="form-label">Marca</label>
+              <select id="complejidad" class="form-select form-select-sm">
+                <option value="">Seleccione</option>
+                <option value="B">Básico</option>
+                <option value="M">Medio</option>
+                <option value="A">Avanzado</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="fechainicio" class="form-label">Stock</label>
+              <input type="date" class="form-control form-control-sm" id="fechainicio">
+            </div>
+            <div class="mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input type="text" class="form-control form-control-sm" id="precio">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary btn-sm" id="guardar-curso">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     
   <!-- Bootstrap JavaScript Libraries -->
